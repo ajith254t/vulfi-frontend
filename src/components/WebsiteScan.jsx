@@ -18,9 +18,9 @@ export default function WebsiteScan({ goBack }) {
     setLoading(true);
 
     try {
-      const response = await axios.post("https://vulfi-backend.onrender.com", {
-        url: url,
-      });
+        const response = await axios.post("https://vulfi-backend.onrender.com/scan",
+        {url}
+      );
 
       setResult(response.data);
     } catch (err) {
@@ -200,3 +200,4 @@ export default function WebsiteScan({ goBack }) {
     </div>
   );
 }
+
