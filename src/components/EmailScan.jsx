@@ -23,9 +23,15 @@ export default function EmailScan({ goBack }) {
         { email }
       );
       setResult(response.data);
-    } catch (err) {
-      setError("Email scan failed. Is backend running?");
-    } finally {
+    }catch (err) {
+  console.error("EMAIL SCAN ERROR 👉", err);
+  setError(
+    err.response?.data?.detail ||
+    err.message ||
+    "Email scan failed"
+  );
+}
+  finally {
       setLoading(false);
     }
   };
@@ -138,4 +144,5 @@ export default function EmailScan({ goBack }) {
     </div>
   );
 }
+
 
