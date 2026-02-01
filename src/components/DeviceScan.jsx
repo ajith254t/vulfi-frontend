@@ -22,8 +22,7 @@ export default function DeviceScan({ goBack }) {
 
     try {
       const response = await axios.post(
-        "http://https://vulfi-backend.onrender.com
-/device-scan",
+        "https://vulfi-backend.onrender.com/device-scan",
         {
           device_type: deviceType,
           os_version: osVersion,
