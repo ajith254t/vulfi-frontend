@@ -19,7 +19,7 @@ export default function EmailScan({ goBack }) {
 
     try {
       const response = await axios.post(
-        "https://vulfi-backend.onrender.com",
+        "https://vulfi-backend.onrender.com/docs",
         { email }
       );
       setResult(response.data);
@@ -138,3 +138,4 @@ export default function EmailScan({ goBack }) {
     </div>
   );
 }
+
